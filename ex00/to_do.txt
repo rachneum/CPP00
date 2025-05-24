@@ -1,0 +1,3 @@
+-> si  ./ tout seul alors renvoyer:
+* LOUD AND UNBEARABLE FEEDBACK NOISE *
+-> si ./ suivi qqch alors imprimer et renvoyer en majuscule
