@@ -2,7 +2,7 @@
 #include <iostream>
 #include <iomanip>
 
-
+//PhoneBook::PhoneBook() : currentIndex(0), contactCount(0) {}//revient au meme.
 PhoneBook::PhoneBook() {
     currentIndex = 0;
     contactCount = 0;
