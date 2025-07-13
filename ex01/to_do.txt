@@ -1,0 +1,38 @@
+
+PhoneBook
+-> contient jusqu’à 8 contacts maximum.
+-> quand on essaie d’ajouter un 9e contact, il remplace le plus ancien.
+-> a zéro allocation dynamique → donc utiliser un tableau fixe de 8 Contact.
+-> affiche la liste.
+-> affiche un contact par index.
+
+Contact
+-> représente une seule personne (prénom, nom, ..).
+-> contient ses informations privées (ex: nom, téléphone, ..).
+-> doit avoir des méthodes publiques pour mettre à jour ou afficher les infos.
+
+_____________
+
+classe -> un plan, une recette qui décrit ce qu'un objet va contenir et faire.
+ex:
+class Contact {
+
+};
+
+objet -> une chose concrète créée à partir d'une classe.
+ex:
+Contact c; //c est un objet de la classe Contact.
+
+instance -> un autre mot pour objet (on dit "une instance de la classe Contact", c’est-à-dire un objet créé à partir de Contact).
+
+classe privée -> caché à l’extérieur, utilisé uniquement à l’intérieur de la classe.
+
+classe publique -> accessible de l’extérieur.
+ex:
+class Contact {
+private:
+    std::string name; //caché
+
+public:
+    void setName(std::string newName) { name = newName; } //accessible
+};
