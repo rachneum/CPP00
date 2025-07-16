@@ -1,58 +1,84 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/15 17:32:26 by raneuman          #+#    #+#             */
+/*   Updated: 2025/07/16 17:54:39 by raneuman         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "PhoneBook.hpp"
-#include <iostream>
-#include <iomanip>
+#include <iostream>//Afin de formater du texte.
+#include <iomanip>//Formate l'affichage?
 
-//PhoneBook::PhoneBook() : currentIndex(0), contactCount(0) {}//revient au meme.
-PhoneBook::PhoneBook() {
-    currentIndex = 0;
-    contactCount = 0;
+PhoneBook::PhoneBook()
+{
+	CountContact = 0;
+	CurrentIndex = 0;
 }
 
-void PhoneBook::add() {
-    Contact newContact;
-    newContact.fillContact();
-    if (!newContact.isValid()) {
-        std::cout << "Erreur : tous les champs doivent être remplis !" << std::endl;
-        return;
-    }
-    contacts[currentIndex] = newContact;
-    currentIndex = (currentIndex + 1) % 8;
-    if (contactCount < 8)
-        contactCount++;
-    std::cout << "Contact ajouté avec succès !" << std::endl;
+void	PhoneBook::add()
+{
+	Contact	newcontact;//Contact est la classe (comme un type personalise). nexContact est une variable locale, objet que je cree dans ma fonction add. cad objet newCContact de type Contact.
+					   //Va me permettre de me servir de mes fonctions membres de ma classe Contact.
+	newcontact.fill_contact();//J'appel la fonction fill_contact sur l'objet newcontact.
+	if (!std::cin.eof())
+	{
+		if (!newcontact.is_valid())
+		{
+			std::cout << "Error: The phonebook must not have empty elements!" << std::endl;
+			return ;
+		}
+	}
+	else//Si il detecte un eof alors exit.
+	{
+		std::cout << "\nInput closed. Exiting..." << std::endl;
+		std::exit(EXIT_FAILURE);
+	}
+	contacts[CurrentIndex] = newcontact;
+	CurrentIndex = (CurrentIndex + 1) % 8;
+	if (CountContact < 8)
+		CountContact++;
+	std::cout << "Contact successfully added!" << std::endl;
 }
 
-void PhoneBook::search() const {
-    if (contactCount == 0) {
-        std::cout << "Aucun contact enregistré." << std::endl;
-        return;
-    }
+void	PhoneBook::search() const
+{
 
-    std::cout << std::setw(10) << "Index" << "|"
+	if (CountContact == 0)
+	{
+		std::cout << "No contact have been added." << std::endl;
+		return ;
+	}
+	std::cout << std::setw(10) << "Index" << "|"
               << std::setw(10) << "First Name" << "|"
               << std::setw(10) << "Last Name" << "|"
               << std::setw(10) << "Nickname" << std::endl;
-
-    int i = 0;
-    while (i < contactCount) {
-        contacts[i].displayList(i);
-        i++;
+	int	i = 0;
+	while (i < CountContact)
+	{
+		contacts[i].display_list(i);
+		i++;
+	}
+	std::cout << "Please enter the index of the contact you want to display: ";
+	std::string input;
+	if (!std::getline(std::cin, input))
+	{
+		std::cout << "\nInput closed. Exitting..." << std::endl;
+		std::exit(EXIT_FAILURE);
+	}
+	if (input.length() != 1 || !isdigit(input[0]))
+	{
+		std::cout << "Invalid index!" << std::endl;
+		return ;
+	}
+	int index = input[0] - '0';
+    if (index < 0 || index >= CountContact) {
+        std::cout << "There isn't any contact in this index." << std::endl;
+        return ;
     }
-
-
-    std::cout << "Entrez l’index du contact à afficher : ";
-    std::string input;
-    std::getline(std::cin, input);
-
-    if (input.length() != 1 || !isdigit(input[0])) {
-        std::cout << "Index invalide." << std::endl;
-        return;
-    }
-
-    int index = input[0] - '0';
-    if (index < 0 || index >= contactCount) {
-        std::cout << "Aucun contact à cet index." << std::endl;
-        return;
-    }
-    contacts[index].displayContact();
+	contacts[index].display_contact();
 }
