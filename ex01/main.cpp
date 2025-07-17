@@ -6,7 +6,7 @@
 /*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 17:03:23 by raneuman          #+#    #+#             */
-/*   Updated: 2025/07/17 14:50:01 by raneuman         ###   ########.fr       */
+/*   Updated: 2025/07/17 16:15:43 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,5 @@ int	main(int argc, char **argv)
 		std::cerr << "Error: Not the right amount of arguments!" << std::endl;
 		return	(EXIT_FAILURE);//Je pourrais tres bien ne pas utiliser la bibli cstlib et simplement return (1).
 	}
-	return (EXIT_SUCCESS);//Je pourrais tres bien ne pas utiliser la bibli cstlib et simplement return (0).
+	return (0);
 }
