@@ -6,13 +6,11 @@
 /*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 17:14:56 by raneuman          #+#    #+#             */
-/*   Updated: 2025/07/16 19:11:08 by raneuman         ###   ########.fr       */
+/*   Updated: 2025/07/17 14:49:08 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
-#include <iostream>
-#include <iomanip>
 
 void	Contact::fill_contact()
 {

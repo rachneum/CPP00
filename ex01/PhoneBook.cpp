@@ -6,13 +6,11 @@
 /*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 17:32:26 by raneuman          #+#    #+#             */
-/*   Updated: 2025/07/16 17:54:39 by raneuman         ###   ########.fr       */
+/*   Updated: 2025/07/17 14:49:42 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
-#include <iostream>//Afin de formater du texte.
-#include <iomanip>//Formate l'affichage?
 
 PhoneBook::PhoneBook()
 {

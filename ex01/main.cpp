@@ -6,13 +6,11 @@
 /*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 17:03:23 by raneuman          #+#    #+#             */
-/*   Updated: 2025/07/16 17:55:19 by raneuman         ###   ########.fr       */
+/*   Updated: 2025/07/17 14:50:01 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
-#include <iostream>
-#include <cstdlib>
 
 int	main(int argc, char **argv)
 {
