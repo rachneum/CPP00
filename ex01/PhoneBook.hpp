@@ -6,7 +6,7 @@
 /*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 17:04:26 by raneuman          #+#    #+#             */
-/*   Updated: 2025/07/16 17:57:23 by raneuman         ###   ########.fr       */
+/*   Updated: 2025/07/18 17:34:24 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class	PhoneBook
 	public:
 		PhoneBook();
 		void	add();
-		void	search() const;//Cherche un contact. (const ici signifie que cette fonction ne modifiera pas l'objet.)
+		void	search() const;
 };
 
 #endif

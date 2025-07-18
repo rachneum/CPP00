@@ -6,7 +6,7 @@
 /*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 17:03:23 by raneuman          #+#    #+#             */
-/*   Updated: 2025/07/17 16:15:43 by raneuman         ###   ########.fr       */
+/*   Updated: 2025/07/18 17:32:48 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	main(int argc, char **argv)
 				phonebook.add();
 			else if (command == "SEARCH")
 				phonebook.search();
-			else if (command == "EXIT")//Faut-il check si il y a des contacts et si oui les supprime avant de break?
+			else if (command == "EXIT")
 				break ;
 			else
 				std::cout << "Unknown command. Please try with ADD, SEARCH or EXIT." << std::endl;
@@ -42,7 +42,7 @@ int	main(int argc, char **argv)
 	else
 	{
 		std::cerr << "Error: Not the right amount of arguments!" << std::endl;
-		return	(EXIT_FAILURE);//Je pourrais tres bien ne pas utiliser la bibli cstlib et simplement return (1).
+		return	(EXIT_FAILURE);
 	}
 	return (0);
 }

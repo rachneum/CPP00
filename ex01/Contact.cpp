@@ -6,7 +6,7 @@
 /*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 17:14:56 by raneuman          #+#    #+#             */
-/*   Updated: 2025/07/17 14:49:08 by raneuman         ###   ########.fr       */
+/*   Updated: 2025/07/18 17:32:02 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,12 +68,12 @@ std::string	clean_tabs(const std::string str)
     return (cleaned);
 }
 
-std::string format_field(std::string str)//Me permet d'afficher les champs bien alignés dans mon tableau.
+std::string format_field(std::string str)
 {
 	str = clean_tabs(str);
-    if (str.length() > 10)//Si ma str est trop longue.
-        return (str.substr(0, 9) + ".");//Prends les 9 premiers caractères de str et ajoute un point final à la chaîne coupée.
-    return (std::string(10 - str.length(), ' ') + str);//Si ma str est trop courte.
+    if (str.length() > 10)
+        return (str.substr(0, 9) + ".");
+    return (std::string(10 - str.length(), ' ') + str);
 }
 
 void	Contact::display_list(int index) const

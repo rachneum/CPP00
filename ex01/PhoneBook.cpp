@@ -6,7 +6,7 @@
 /*   By: raneuman <raneuman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 17:32:26 by raneuman          #+#    #+#             */
-/*   Updated: 2025/07/17 14:49:42 by raneuman         ###   ########.fr       */
+/*   Updated: 2025/07/18 17:33:48 by raneuman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,8 @@ PhoneBook::PhoneBook()
 
 void	PhoneBook::add()
 {
-	Contact	newcontact;//Contact est la classe (comme un type personalise). nexContact est une variable locale, objet que je cree dans ma fonction add. cad objet newCContact de type Contact.
-					   //Va me permettre de me servir de mes fonctions membres de ma classe Contact.
-	newcontact.fill_contact();//J'appel la fonction fill_contact sur l'objet newcontact.
+	Contact	newcontact;
+	newcontact.fill_contact();
 	if (!std::cin.eof())
 	{
 		if (!newcontact.is_valid())
@@ -31,7 +30,7 @@ void	PhoneBook::add()
 			return ;
 		}
 	}
-	else//Si il detecte un eof alors exit.
+	else
 	{
 		std::cout << "\nInput closed. Exiting..." << std::endl;
 		std::exit(EXIT_FAILURE);
