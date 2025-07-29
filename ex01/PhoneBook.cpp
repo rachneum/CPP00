@@ -16,6 +16,7 @@ PhoneBook::PhoneBook()
 {
 	CountContact = 0;
 	CurrentIndex = 0;
+	std::cout << "PhoneBook construcor called." << std::endl;
 }
 
 void	PhoneBook::add()

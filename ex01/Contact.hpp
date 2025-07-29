@@ -15,9 +15,9 @@
 
 # include <string>
 # include <iostream>
-# include <iomanip>
-# include <cctype>
-# include <cstdlib>
+# include <iomanip>//Pour setw().
+# include <cctype>//Pour isdigit().
+# include <cstdlib>//Pour exit().
 
 class	Contact
 {

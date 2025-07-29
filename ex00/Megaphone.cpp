@@ -7,8 +7,8 @@ int main(int argc, char **argv)
 
     if (argc == 1)
     {//cout = charactère output (un peu comme un printf en c).
-        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << "cest rachel" << std::endl;//<< est un opérateur d'insertion, il "envoie vers".
-        //std::end est comme un \n en c.
+        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;//<< est un opérateur d'insertion, il "envoie vers".
+        //std::endl est comme un \n en c.
     }
     else
     {
